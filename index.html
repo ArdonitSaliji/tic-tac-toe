@@ -56,9 +56,14 @@
                     let gameOverDisplay = document.querySelector('.gameOver');
                     let notification = document.querySelector('.notification');
 
+                    let isDraw = tilesArray.every((tile) => tile.firstChild); // Check if all tiles have an i tag in them
+
                     if (isGameWonByX || isGameWonByO) {
                         gameOverDisplay.classList.add('show');
                         notification.innerText = isGameWonByX ? 'Cross Won!' : 'Circle Won!';
+                    } else if (isDraw) {
+                        gameOverDisplay.classList.add('show');
+                        notification.innerText = 'Draw!';
                     }
                 });
             });
