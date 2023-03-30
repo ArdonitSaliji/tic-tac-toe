@@ -1,0 +1,68 @@
+html,
+body {
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: center;
+    border: 1px solid black;
+}
+
+.tile {
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    transition: 0.1s;
+}
+
+.tile:hover {
+    cursor: pointer;
+    background-color: #afafaf;
+}
+
+.tile:active {
+    background-color: #636363;
+}
+
+.tile i {
+    pointer-events: none;
+}
+
+.gameOver {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+.gameOver button {
+    cursor: pointer;
+}
+.notification {
+    color: white;
+}
+.show {
+    display: flex;
+}
